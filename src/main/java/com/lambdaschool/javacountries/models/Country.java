@@ -61,4 +61,15 @@ public class Country {
     public void setMedianage(int medianage) {
         this.medianage = medianage;
     }
+
+    @Override
+    public String toString() {
+        return "Country{" + 
+        "countryid=" + countryid + 
+        ", name='" + name + '\'' +
+        ", population=" + population +
+        ", landmasskm2=" + landmasskm2 +
+        ", medianage=" + medianage +
+        '}';
+    }
 }
