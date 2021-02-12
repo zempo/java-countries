@@ -28,7 +28,7 @@ public class CountryController {
         return tempList;
     }
 
-    // http://localhost:2019/names/all
+    // http://localhost:8087/names/all
     @GetMapping(value = "/names/all", produces = "application/json")
     public ResponseEntity<?> listAllCountries() {
         List<Country> myList = new ArrayList<>();
@@ -36,7 +36,7 @@ public class CountryController {
         return new ResponseEntity<>(myList, HttpStatus.OK);
     }
 
-    // http://localhost:2019/names/start/u
+    // http://localhost:8087/names/start/u
     @GetMapping(value = "/names/start/{letter}")
     public ResponseEntity<?> listAllCountriesByFirstChar(@PathVariable char letter) {
         List<Country> myList = new ArrayList<>();
@@ -45,7 +45,7 @@ public class CountryController {
         return new ResponseEntity<>(rtnList, HttpStatus.OK);
     }
 
-    // http:localhost:2019/population/total
+    // http:localhost:8087/population/total
     @GetMapping
     public ResponseEntity<?> totalPopulation() {
         List<Country> myList = new ArrayList<>();
@@ -62,7 +62,7 @@ public class CountryController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    // http:localhost:2019/population/min
+    // http:localhost:8087/population/min
     @GetMapping
     public ResponseEntity<?> minPopulation() {
         List<Country> myList = new ArrayList<>();
@@ -71,7 +71,7 @@ public class CountryController {
         return new ResponseEntity<>(myList.get(0), HttpStatus.OK);
     }
 
-    // http:localhost:2019/population/max
+    // http:localhost:8087/population/max
     @GetMapping
     public ResponseEntity<?> maxPopulation() {
         List<Country> myList = new ArrayList<>();
@@ -80,7 +80,7 @@ public class CountryController {
         return new ResponseEntity<>(myList.get(0), HttpStatus.OK);
     }
 
-    // http://localhost:2019/population/median
+    // http://localhost:8087/population/median
     @GetMapping
     public ResponseEntity<?> medianPopulation() {
         List<Country> myList = new ArrayList<>();
